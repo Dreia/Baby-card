@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80DEEA"
+    tools:context=".MainActivity">
+
+    <!--Create a layout for the upper half of the screen -->
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/centerShim">
+
+        <!--Place the background image to fill the upper half of the screen-->-->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/header" />
+
+        <!--Insert a rectangle shape previously created in the drawable folder-->
+        <ImageView
+            android:id="@+id/rectimage"
+            android:layout_width="@dimen/rectangle_width"
+            android:layout_height="@dimen/rectangle_height"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:rotation="5"
+            android:src="@drawable/rectangle" />
+
+        <!--Write the message for the card-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="cursive"
+            android:maxLines="2"
+            android:rotation="5"
+            android:text="@string/message"
+            android:textAlignment="center"
+            android:textAppearance="@style/message" />
+
+    </RelativeLayout>
+
+    <!--Place an imaginary element to split the screen in two-->
+    <View
+        android:id="@+id/centerShim"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+
+    <!--Place image of baby-->
+    <ImageView
+        android:id="@+id/baby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/babyName"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/baby" />
+
+    <!--Write the name of the baby using custom font AirConditioner-->
+    <TextView
+        android:id="@+id/babyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/padding_bottom"
+        android:text="@string/baby_name"
+        android:textAppearance="@style/baby_Name" />
+
+</RelativeLayout>

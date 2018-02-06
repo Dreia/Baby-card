@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="rectangle_width">300dp</dimen>
+    <dimen name="rectangle_height">150dp</dimen>
+    <dimen name="padding_bottom">10dp</dimen>
+</resources>
